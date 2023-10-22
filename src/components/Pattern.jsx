@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Pattern = () => {
-    const [size, setSize] = useState(0);
+    const [size, setSize] = useState(5);
     const [output, setOutput] = useState('')
   function printCross(size) {
       let result = "";
@@ -12,11 +12,11 @@ const Pattern = () => {
         if (i === j || j === size - 1 - i) {
           row += "X";
         } else {
-          row += "2 ";
+          row += " ";
         }
     }
     result += row + "\n";
-        console.log(row);
+        console.log(result);
       setOutput(result);
     }
   }

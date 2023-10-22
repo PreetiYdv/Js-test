@@ -18,10 +18,14 @@ const FormPrac = () => {
       contact: "",
       gender: "",
     });
+    console.log(newArray.length);
   };
   return (
     <>
       <section className=" h-screen flex justify-center flex-col items-center bg-[#10111A]">
+        <h2 className="text-white text-3xl mb-4 text-center font-semibold">
+          Form
+        </h2>
         <form>
           <div className="flex flex-col justify-center rounded-md border bg-white/4 backdrop-blur-md  gap-5 px-20 py-10">
             <div className="flex gap-5">
@@ -69,9 +73,7 @@ const FormPrac = () => {
                   setFormData({ ...formData, gender: e.target.value });
                 }}
               >
-                <option selected >
-                  Gender
-                </option>
+                <option selected>Gender</option>
                 <option value="male" className="text-black">
                   Male
                 </option>
@@ -94,10 +96,12 @@ const FormPrac = () => {
             <table className=" border-[2px] mt-3">
               <thead>
                 <tr className="border-[2px]">
-                  <th className="px-5 text-white p-3">FirstName</th>
-                  <th className="px-5 text-white">lastName</th>
-                  <th className="px-5 text-white">contact</th>
-                  <th className="px-5 text-white">gender</th>
+                  <th className="px-5 text-white p-3 border-[2px]">
+                    FirstName
+                  </th>
+                  <th className="px-5 text-white border-[2px]">lastName</th>
+                  <th className="px-5 text-white border-[2px]">contact</th>
+                  <th className="px-5 text-white border-[2px]">gender</th>
                 </tr>
               </thead>
               {newArray.map((obj, i) => {
@@ -105,10 +109,18 @@ const FormPrac = () => {
                   <>
                     <tbody>
                       <tr className="border-[2px]" key={i}>
-                        <td className="px-5 text-white p-3">{obj.FirstName}</td>
-                        <td className="px-5 text-white"> {obj.lastName}</td>
-                        <td className="px-5 text-white"> {obj.contact}</td>
-                        <td className="px-5 text-white"> {obj.gender}</td>
+                        <td className="px-5 text-white p-3 border-[2px]">
+                          {obj.FirstName}
+                        </td>
+                        <td className="px-5 text-white border-[2px]">
+                          {obj.lastName}
+                        </td>
+                        <td className="px-5 text-white border-[2px]">
+                          {obj.contact}
+                        </td>
+                        <td className="px-5 text-white border-[2px]">
+                          {obj.gender}
+                        </td>
                       </tr>
                     </tbody>
                   </>

@@ -12,7 +12,7 @@ const Content = () => {
             <Link
               key={i}
               to={link}
-              className="border-2 rounded-md border-white bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 px-4 py-3"
+              className="border-2 rounded-md border-white text-center bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 px-4 py-3"
             >
               {title}
               </Link>

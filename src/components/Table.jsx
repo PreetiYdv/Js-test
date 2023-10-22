@@ -49,20 +49,23 @@ const Table = () => {
     <>
       <section className="min-h-screen bg-[#10111A] py-12">
         <div className="container mx-auto h-full flex justify-center flex-col items-center py-12">
+          <h2 className="text-white text-3xl mb-4 text-center font-semibold">
+           Table
+          </h2>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col justify-center rounded-md border max-w-[600px] bg-white/5 backdrop-blur-md gap-5 px-20 py-10">
               <div className="flex gap-2">
                 <input
                   type="text"
                   className="py-1 px-2 bg-transparent text-white border-b outline-none appearance-none"
-                  placeholder="starting number"
+                  placeholder="From"
                   value={start}
                   onChange={(e) => setStart(e.target.value)}
                 />
                 <input
                   type="text"
                   className="py-1 px-2 bg-transparent text-white border-b outline-none appearance-none"
-                  placeholder="end"
+                  placeholder="to"
                   value={end}
                   onChange={(e) => setEnd(e.target.value)}
                 />

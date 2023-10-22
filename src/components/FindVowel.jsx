@@ -24,14 +24,14 @@ const FindVowel = () => {
              </span>
            );
        }
-      //  else {
-      //      result.push(
-      //        <span key={j} className="text-red-500">
-      //          {letter}  is a consonant
-      //          <br />
-      //        </span>
-      //      );
-      //  }
+       else {
+           result.push(
+             <span key={j} className="text-red-500">
+               {letter}  is a consonant
+               <br />
+             </span>
+           );
+       }
      }
         setOutput(result);
         setWord('')

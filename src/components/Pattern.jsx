@@ -4,22 +4,34 @@ import { useState } from "react";
 const Pattern = () => {
     const [size, setSize] = useState(5);
     const [output, setOutput] = useState('')
-  function printCross(size) {
-      let result = "";
-    for (let i = 0; i < size; i++) {
-      let row = "";
-      for (let j = 0; j < size; j++) {
-        if (i === j || j === size - 1 - i) {
-          row += "X";
-        } else {
-          row += " ";
-        }
-    }
-    result += row + "\n";
-        console.log(result);
-      setOutput(result);
-    }
-  }
+ function printCross(size) {
+   let result = [];
+   for (let i = 0; i < size; i++) {
+     let row = [];
+     for (let j = 0; j < size; j++) {
+       if (i === j || j === size - 1 - i) {
+         row.push(
+           <span key={j} className="text-white">
+             😁
+           </span>
+         );
+       } else {
+         row.push(
+             <span key={j} className="text-transparent w-[21px] inline-block">
+                 {" "}
+           </span>
+         );
+       }
+     }
+     result.push(
+       <div key={i} className="whitespace-pre">
+         {row}
+       </div>
+     );
+   }
+   setOutput(result);
+ }
+
   const handleSubmit = (e) => {
       e.preventDefault();
        printCross(size);
@@ -45,13 +57,9 @@ const Pattern = () => {
               >
                 Output
               </button>
+              <div className="mt-2 text-white h-full">{output}</div>
             </div>
           </form>
-        </div>
-        <div className="container mx-auto">
-          <div className="mt-2 text-white h-full">
-            {output}
-          </div>
         </div>
       </section>
     </>

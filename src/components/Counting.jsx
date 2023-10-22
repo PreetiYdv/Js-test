@@ -23,7 +23,7 @@ const Counting = () => {
           className="flex justify-center flex-col items-center"
         >
           <h2 className="text-white text-3xl mb-4 text-center font-semibold">
-            Counting
+            Counting from given number to 100
           </h2>
           <input
             type="number"

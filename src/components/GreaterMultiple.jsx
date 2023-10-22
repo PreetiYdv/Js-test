@@ -34,7 +34,7 @@ const GreaterMultiple = () => {
         <div className="container mx-auto h-full flex justify-center flex-col items-center">
           <form onSubmit={handleSubmit}>
             <h2 className="text-white text-3xl mb-4 text-center font-semibold">
-              Greater multiple of array {array + ","} number
+              Greater multiple of array {array + ","} number.
             </h2>
             <input
               type="number"

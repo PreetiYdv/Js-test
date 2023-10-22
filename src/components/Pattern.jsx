@@ -40,6 +40,9 @@ const Pattern = () => {
     <>
       <section className="min-h-screen bg-[#10111A] py-12">
         <div className="container mx-auto h-full flex justify-center flex-col items-center py-12">
+          <h2 className="text-white text-3xl mb-4 text-center font-semibold">
+          Print Pattern 
+          </h2>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col justify-center rounded-md border max-w-[600px] bg-white/5 backdrop-blur-md gap-5 px-20 py-10">
               <div className="flex gap-2">
